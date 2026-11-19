@@ -75,7 +75,7 @@ Ein Python-Tool zum automatischen Extrahieren und Verwalten von Lidl-Kassenbonda
 5. **Install dependencies**
 
    ```bash
-   pip install -r requirements.txt
+   python -m pip install -r requirements.txt
    ```
 
 Now the project is successfully set up and you can start extracting data from your Lidl+ account!
@@ -226,7 +226,7 @@ This will start a web-based dashboard accessible at `http://localhost:8501` wher
 5. **Benötigte Packages installieren**
 
    ```bash
-   pip install -r requirements.txt
+   python -m pip install -r requirements.txt
    ```
 
 Jetzt ist das Projekt erfolgreich aufgesetzt und Sie können anfangen, Ihre Daten aus Ihrem Lidl+ Account zu ziehen!

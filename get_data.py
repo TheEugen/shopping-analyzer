@@ -16,9 +16,18 @@ Usage:
 import argparse
 import sys
 
-from cli import main
-from config import LidlConfig
-from workflows import initial_setup, update_data
+try:
+    from cli import main
+    from config import LidlConfig
+    from workflows import initial_setup, update_data
+except ModuleNotFoundError as exc:
+    if __name__ != "__main__" or exc.name not in {"requests", "browser_cookie3", "bs4"}:
+        raise
+    sys.exit(
+        f"Missing Python dependency ({exc.name}). Install the project dependencies "
+        "from the project folder, then rerun get_data.py:\n"
+        "  python -m pip install -r requirements.txt"
+    )
 
 
 def create_parser() -> argparse.ArgumentParser:
